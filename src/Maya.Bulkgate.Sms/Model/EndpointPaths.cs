@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace Maya.BulkGate.Sms.Model
+﻿namespace Maya.BulkGate.Sms.Model
 {
     internal static class EndpointPaths
     {
@@ -13,5 +7,7 @@ namespace Maya.BulkGate.Sms.Model
         public const string AdvancedTransactional = "advanced/transactional";
         
         public const string AdvancedPromotional = "advanced/promotional";
+
+        public const string AdvancedInfo = "advanced/info";
     }
 }

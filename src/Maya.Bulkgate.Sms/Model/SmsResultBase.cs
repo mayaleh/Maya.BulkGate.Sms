@@ -1,18 +1,10 @@
-﻿using Newtonsoft.Json;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿
+using Newtonsoft.Json;
 
 namespace Maya.BulkGate.Sms.Model
 {
-    public class SmsResult
+    public class SmsResultBase
     {
-
-        [JsonProperty("data", NullValueHandling = NullValueHandling.Ignore)]
-        public DataReuslt Data { get; set; }
-
         [JsonProperty("type", NullValueHandling = NullValueHandling.Ignore)]
         public string Type { get; set; }
 

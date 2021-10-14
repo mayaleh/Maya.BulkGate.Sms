@@ -1,2 +1,19 @@
 - name: Introduction
   href: intro.md
+- name: Trasnactional SMS
+  homepage: Transactional/index.md
+  items:
+    - name: "Specification"
+      href: Transactional/index.md
+    - name: "Sending message to notification admin"
+      href: Transactional/messagetoadmin.md
+- name: Promotional SMS
+  items:
+    - name: "Specification"
+      href: Promotional/index.md
+  homepage: Promotional/index.md
+- name: Balance
+  homepage: Balance/index.md
+  items:
+    - name: "Specification"
+      href: Balance/index.md

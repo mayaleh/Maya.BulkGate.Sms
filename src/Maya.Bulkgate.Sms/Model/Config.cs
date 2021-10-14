@@ -1,13 +1,18 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace Maya.BulkGate.Sms.Model
+﻿namespace Maya.BulkGate.Sms.Model
 {
     public class Config : IConfig
     {
+        public Config()
+        {
+
+        }
+
+        public Config(string appId, string appToken)
+        {
+            this.ApplicationId = appId;
+            this.ApplicationToken = appToken;
+        }
+
         /// <summary>
         /// Application ID see https://help.bulkgate.com/docs/en/api-administration.html#what-is-application-id
         /// </summary>

@@ -8,24 +8,39 @@ using Maya.Ext.Rop;
 
 namespace Maya.BulkGate.Sms
 {
-    internal class BaseClient : BaseApiService
+    public class BaseClient : BaseApiService
     {
         public BaseClient(IHttpClientConnector httpClientConnenctor) : base(httpClientConnenctor)
         {
         }
 
-        public async Task<Result<Model.SmsResult, Exception>> SendSmsRequest<T>(string path, T data)
+        public async Task<Result<TResult, Exception>> SendSmsRequest<TData, TResult>(string path, TData data)
         {
             try
             {
                 var uri = BaseApiService.ComposeUri(this.HttpClientConnenctor.Endpoint, new List<string> { path });
 
-                return await this.HttpPost<Model.SmsResult>(uri, data)
+                return await this.HttpPost<TResult>(uri, data)
                     .ConfigureAwait(false);
             }
             catch (Exception e)
             {
-                return Result<Model.SmsResult, Exception>.Failed(e);
+                return Result<TResult, Exception>.Failed(e);
+            }
+        }
+
+        public async Task<Result<TResult, Exception>> EmptyPostAsync<TResult>(string path)
+        {
+            try
+            {
+                var uri = BaseApiService.ComposeUri(this.HttpClientConnenctor.Endpoint, new List<string> { path });
+
+                return await this.HttpPost<TResult>(uri, new() { })
+                    .ConfigureAwait(false);
+            }
+            catch (Exception e)
+            {
+                return Result<TResult, Exception>.Failed(e);
             }
         }
     }

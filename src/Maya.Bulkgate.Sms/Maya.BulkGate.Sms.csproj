@@ -1,4 +1,4 @@
-<Project Sdk="Microsoft.NET.Sdk">
+﻿<Project Sdk="Microsoft.NET.Sdk">
 	<PropertyGroup>
 		<TargetFramework>net5.0</TargetFramework>
 		<Authors>Salim Mayaleh</Authors>
@@ -6,7 +6,7 @@
 		<PackageId>Maya.BulkGate.Sms</PackageId>
 		<Description>Maya.BulkGate.Sms is a simple library for sending SMS via BulkGate.</Description>
 		<Summary>Library for sending SMS via BulkGate.</Summary>
-		<PackageLicenseExpression>MIT</PackageLicenseExpression>
+		<PackageLicenseExpression>BSD-3-Clause</PackageLicenseExpression>
 		<NeutralLanguage>en</NeutralLanguage>
 
 		<Deterministic>true</Deterministic>
