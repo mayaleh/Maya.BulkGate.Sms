@@ -15,13 +15,13 @@ namespace Maya.BulkGate.Sms.Model.Promotional
         /// <summary>
         /// Array of numbers of groups in BulkGate address book. Is required or Number or Admins More info
         /// </summary>
-        [JsonProperty("Groups")]
+        [JsonProperty("Groups", NullValueHandling = NullValueHandling.Ignore)]
         public IEnumerable<int> Groups { get; set; }
 
         /// <summary>
         /// Array of numbers of BulkGate administrators receiving notifications. Is required or Groups or Numebr More info
         /// </summary>
-        [JsonProperty("admins")]
+        [JsonProperty("admins", NullValueHandling = NullValueHandling.Ignore)]
         public IEnumerable<int> Admins { get; set; }
 
         /// <summary>

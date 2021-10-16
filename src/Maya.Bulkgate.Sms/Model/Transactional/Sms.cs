@@ -16,8 +16,8 @@ namespace Maya.BulkGate.Sms.Model.Transactional
         /// <summary>
         /// Number of BulkGate administrator receiving notification.
         /// </summary>
-        [JsonProperty("admin")]
-        public int Admin { get; set; }
+        [JsonProperty("admin", NullValueHandling = NullValueHandling.Ignore)]
+        public int? Admin { get; set; }
 
         /// <summary>
         /// Text of the SMS message (max. 612 characters, or 268 characters, if Unicode is activated), UTF-8 encoding.

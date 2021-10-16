@@ -9,7 +9,7 @@ namespace Maya.BulkGate.Sms.Model
         /// true for Unicode SMS, false for 7bit SMS
         /// </summary>
         [JsonProperty("unicode", NullValueHandling = NullValueHandling.Ignore)]
-        public bool Unicode { get; set; }
+        public bool? Unicode { get; set; } = true;
 
         /// <summary>
         /// Sender id types:
@@ -70,7 +70,7 @@ namespace Maya.BulkGate.Sms.Model
         /// Schedule the sending time and date in unix timestamp, or ISO 8601.
         /// </summary>
         [JsonProperty("schedule", NullValueHandling = NullValueHandling.Ignore)]
-        public DateTime Schedule { get; set; }
+        public DateTime? Schedule { get; set; }
 
         /// <summary>
         /// Message label for subsequent retrieval of the user.

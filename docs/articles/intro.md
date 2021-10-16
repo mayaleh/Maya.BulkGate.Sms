@@ -11,12 +11,17 @@ To send an SMS, you wil need to get your own `APPLICATION_ID` and `APPLICATION_T
 After creating API access, you are finally able to send SMS (Transactional SMS):
 
 ```c#
-var bulkSmsConfig = new Maya.BulkGate.Model.Config("your APPLICATION_ID", "your APPLICATION_TOKEN");
+var bulkSmsConfig = new Maya.BulkGate.Sms.Model.Config("your APPLICATION_ID", "your APPLICATION_TOKEN");
 
-var bulkSmsClient = new Maya.BulkGate.Sms(bulkSmsConfig);
+var bulkSmsClient = new Maya.BulkGate.Sms.Client(bulkSmsConfig);
 
 await bulkSmsClient.Transactional.SendSmsToNumber("447971700001", "test message")
     .ConfigureAwait(false);
 ```
 
 This will send the transactional SMS to the phone number 447971700001 with the content `test message`.
+
+
+## Dependency Injection extensions
+
+coming soon...
