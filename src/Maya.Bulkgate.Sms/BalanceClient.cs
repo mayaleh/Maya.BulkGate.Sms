@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace Maya.BulkGate.Sms
 {
-    public class BalanceClient
+    public class BalanceClient : IBalanceClient
     {
         private readonly BaseClient baseClient;
 

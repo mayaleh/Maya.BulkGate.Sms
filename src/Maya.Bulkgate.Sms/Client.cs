@@ -14,6 +14,8 @@ namespace Maya.BulkGate.Sms
 
         public ITransactionalClient Transactional { get; }
 
+        public IBalanceClient BalanceClient { get; }
+
         public Client(IConfig config)
         {
             this.ValidateConfigHard(config);
@@ -25,6 +27,8 @@ namespace Maya.BulkGate.Sms
             Promotional = new PromotionalClient(this.baseClient);
 
             Transactional = new TransactionalClient(this.baseClient);
+
+            BalanceClient = new BalanceClient(this.baseClient);
         }
 
         private void ValidateConfigHard(IConfig config)

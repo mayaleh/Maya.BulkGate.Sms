@@ -5,5 +5,7 @@
         IPromotionalClient Promotional { get; }
 
         ITransactionalClient Transactional { get; }
+
+        IBalanceClient BalanceClient { get; }
     }
 }
