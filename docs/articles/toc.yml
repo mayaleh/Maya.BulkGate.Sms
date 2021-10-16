@@ -11,6 +11,8 @@
   items:
     - name: "Specification"
       href: Promotional/index.md
+    - name: "Send to groups"
+      href: Promotional/sendtogroups.md
   homepage: Promotional/index.md
 - name: Balance
   homepage: Balance/index.md

@@ -2,7 +2,7 @@
 
 Before sending any SMS, it is needed to have instance of `Maya.BulkGate.Sms`. See the [Introduction](/articles/intro.md).
 
-In examples of this section (Transactional SMS), the instanced class is in the variable `bulkSmsClient`.
+In an examples of this section (Transactional SMS), the instanced class is in the variable `bulkSmsClient`.
 
 There are two ways to sending transactional SMS.
 
