@@ -1,6 +1,6 @@
 # Maya.Bulkgate.Sms
 
-[![NuGet](https://img.shields.io/nuget/v/Maya.Bulkgate.Sms.svg)](https://www.nuget.org/packages/Maya.Bulkgate.Sms)
+[![NuGet](https://img.shields.io/nuget/v/Maya.Bulkgate.Sms.svg)](https://www.nuget.org/packages/Maya.BulkGate.Sms)
 
 ## Get it
 
@@ -12,4 +12,4 @@ PM> Install-Package Maya.Bulkgate.Sms
 
 
 ## Usages
-[Introduction](https://mayaleh.github.io/Maya.Bulkgate.Sms/articles/intro.html)
+[Introduction](https://mayaleh.github.io/Maya.BulkGate.Sms/articles/intro.html)
