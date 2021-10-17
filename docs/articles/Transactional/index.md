@@ -34,7 +34,7 @@ var result = await bulkSmsClient.Transactional.SendSms(sms)
     .ConfigureAwait(false);
 ```
 
-The both methods in examples will return same type on success [Maya.BulkGate.Sms.Model.Transactional.SmsResult](/api/Maya.BulkGate.Sms.Model.Transactional.SmsResult.html) or will thrown an exception on failure.
+The both methods in examples will return same type on success [Maya.BulkGate.Sms.Model.Transactional.SmsResult](/Maya.BulkGate.Sms/api/Maya.BulkGate.Sms.Model.Transactional.SmsResult.html) or will thrown an exception on failure.
 
 In the second way, it is possible to specify more options like variables, sender, scheduling...etc.
-For all options and its specifications, see the API documentation of the class [Maya.BulkGate.Sms.Model.Transactional.Sms](/api/Maya.BulkGate.Sms.Model.Transactional.Sms.html) and [Maya.BulkGate.Sms.Model.SmsBase](/api/Maya.BulkGate.Sms.Model.SmsBase.html).
+For all options and its specifications, see the API documentation of the class [Maya.BulkGate.Sms.Model.Transactional.Sms](/Maya.BulkGate.Sms/api/Maya.BulkGate.Sms.Model.Transactional.Sms.html) and [Maya.BulkGate.Sms.Model.SmsBase](/Maya.BulkGate.Sms/api/Maya.BulkGate.Sms.Model.SmsBase.html).
