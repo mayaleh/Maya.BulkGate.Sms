@@ -12,4 +12,9 @@ PM> Install-Package Maya.Bulkgate.Sms
 
 
 ## Usages
-[Introduction](https://mayaleh.github.io/Maya.Bulkgate.Sms/articles/intro.html)
+[Introduction and documentation](https://mayaleh.github.io/Maya.Bulkgate.Sms/articles/intro.html)
+
+
+[Sample with DI](https://github.com/mayaleh/Maya.SendSms)
+
+[♥ Sponsor](https://github.com/sponsors/mayaleh)
