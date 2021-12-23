@@ -18,7 +18,7 @@ namespace Maya.BulkGate.Sms
 
         public Client(IConfig config)
         {
-            this.ValidateConfigHard(config);
+            ValidateConfigHard(config);
 
             this.config = config;
 
@@ -31,7 +31,7 @@ namespace Maya.BulkGate.Sms
             BalanceClient = new BalanceClient(this.baseClient);
         }
 
-        private void ValidateConfigHard(IConfig config)
+        private static void ValidateConfigHard(IConfig config)
         {
             if (config == null)
             {

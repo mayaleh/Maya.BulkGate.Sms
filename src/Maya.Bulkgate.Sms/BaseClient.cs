@@ -8,7 +8,7 @@ using Maya.Ext.Rop;
 
 namespace Maya.BulkGate.Sms
 {
-    public class BaseClient : BaseApiService
+    public class BaseClient : ApiService
     {
         public BaseClient(IHttpClientConnector httpClientConnenctor) : base(httpClientConnenctor)
         {
@@ -18,9 +18,9 @@ namespace Maya.BulkGate.Sms
         {
             try
             {
-                var uri = BaseApiService.ComposeUri(this.HttpClientConnenctor.Endpoint, new List<string> { path });
+                var uriRequest = new UriRequest(new List<string> { path });
 
-                return await this.HttpPost<TResult>(uri, data)
+                return await this.HttpPost<TResult>(uriRequest, data)
                     .ConfigureAwait(false);
             }
             catch (Exception e)
@@ -33,9 +33,9 @@ namespace Maya.BulkGate.Sms
         {
             try
             {
-                var uri = BaseApiService.ComposeUri(this.HttpClientConnenctor.Endpoint, new List<string> { path });
+                var uriRequest = new UriRequest(new List<string> { path });
 
-                return await this.HttpPost<TResult>(uri, new() { })
+                return await this.HttpPost<TResult>(uriRequest, new() { })
                     .ConfigureAwait(false);
             }
             catch (Exception e)
