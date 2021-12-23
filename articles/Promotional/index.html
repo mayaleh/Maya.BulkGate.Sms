@@ -1,0 +1,166 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Promotional Sms </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Promotional Sms ">
+    <meta name="generator" content="docfx 2.56.7.0">
+    
+    <link rel="shortcut icon" href="../../favicon.ico">
+    <link rel="stylesheet" href="../../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../../styles/docfx.css">
+    <link rel="stylesheet" href="../../styles/main.css">
+    <meta property="docfx:navrel" content="../../toc.html">
+    <meta property="docfx:tocrel" content="../toc.html">
+    
+    
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../../index.html">
+                <img id="logo" class="svg" src="../../logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="">
+<h1 id="promotional-sms">Promotional Sms</h1>
+
+<p>Before sending any SMS, it is needed to have instance of <code>Maya.BulkGate.Sms</code>. See the <a href="/articles/intro.md">Introduction</a>.</p>
+<p>In an examples of this section (Promotional SMS), the instanced class is in the variable <code>bulkSmsClient</code>.</p>
+<h2 id="send-to-numbers">Send to numbers</h2>
+<p>numbers declaration could be defined like an array of numbers:</p>
+<pre><code class="lang-c#">var sms = new Maya.BulkGate.Sms.Model.Promotional.Sms&lt;string&gt;
+{
+    Number = new List&lt;string&gt;
+    {
+        &quot;420775123456&quot;,
+        &quot;420606123456&quot;,
+        &quot;44771447678&quot;
+    },
+    Text = &quot;Hi &lt;first_name&gt;&quot;
+};
+
+var result = await bulkSmsClient.Promotional.SendSms(sms)
+    .ConfigureAwait(false);
+</code></pre>
+<p>or as array of objects, where every recipient number could have difference template and variables:</p>
+<pre><code class="lang-c#">// define variables
+var variablesA = new Dictionary&lt;string, object&gt;();
+variablesA.Add(&quot;a&quot;, 12354);
+
+var variablesB = new Dictionary&lt;string, object&gt;();
+variablesB.Add(&quot;b&quot;, 12354);
+variablesB.Add(&quot;c&quot;, DateTime.Now);
+variablesB.Add(&quot;d&quot;, &quot;abc&quot;);
+
+// define sms 
+var smsProm = new Maya.BulkGate.Sms.Model.Promotional.Sms&lt;Maya.BulkGate.Sms.Model.Promotional.Number&gt;
+{
+    Number = new List&lt;Maya.BulkGate.Sms.Model.Promotional.Number&gt;
+    {
+        new Maya.BulkGate.Sms.Model.Promotional.Number
+        {
+            PhoneNumber = &quot;789456128&quot;,
+            Text = &quot;Your code is: &lt;a&gt;&quot;,
+            Variables = variablesA
+        },
+        new Maya.BulkGate.Sms.Model.Promotional.Number
+        {
+            PhoneNumber = &quot;789456123&quot;,
+            Text = &quot;Your code is: &lt;b&gt;. Generated at &lt;c&gt; for &lt;d&gt;&quot;,
+            Variables = variablesB
+        }
+    }
+};
+
+// sending SMS
+var result = await bulkSmsClient.Promotional.SendSms(smsProm)
+    .ConfigureAwait(false);
+</code></pre>
+<p>The both methods in examples will return same type on success <a href="/Maya.BulkGate.Sms/api/Maya.BulkGate.Sms.Model.Promotional.SmsResult.html">Maya.BulkGate.Sms.Model.Promotional.SmsResult</a> or will thrown an exception on failure.</p>
+<p>It is possible to specify more options like variables, sender, scheduling...etc.
+For all options and its specifications, see the API documentation of the class <a href="/Maya.BulkGate.Sms/api/Maya.BulkGate.Sms.Model.Promotional.Sms.html">Maya.BulkGate.Sms.Model.Promotional.Sms</a> and <a href="/Maya.BulkGate.Sms/api/Maya.BulkGate.Sms.Model.SmsBase.html">Maya.BulkGate.Sms.Model.SmsBase</a>.</p>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/mayaleh/Maya.BulkGate.Sms/blob/release-2.0.0/docs/articles/Promotional/index.md/#L1" class="contribution-link">Improve this Doc</a>
+                  </li>
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+                <h5>In This Article</h5>
+                <div></div>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            
+            <span>Generated by <strong>DocFX</strong></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../../styles/docfx.js"></script>
+    <script type="text/javascript" src="../../styles/main.js"></script>
+  </body>
+</html>

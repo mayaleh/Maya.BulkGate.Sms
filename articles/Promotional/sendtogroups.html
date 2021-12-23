@@ -1,0 +1,253 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Send to groups from address book </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Send to groups from address book ">
+    <meta name="generator" content="docfx 2.56.7.0">
+    
+    <link rel="shortcut icon" href="../../favicon.ico">
+    <link rel="stylesheet" href="../../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../../styles/docfx.css">
+    <link rel="stylesheet" href="../../styles/main.css">
+    <meta property="docfx:navrel" content="../../toc.html">
+    <meta property="docfx:tocrel" content="../toc.html">
+    
+    
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../../index.html">
+                <img id="logo" class="svg" src="../../logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="">
+<h1 id="send-to-groups-from-address-book">Send to groups from address book</h1>
+
+<p>It is possible to send message to contacts saved in groups in BulkGate address book. Only <code>Group ID</code> and the text is needed:</p>
+<pre><code class="lang-c#">// specify the groups
+var groups = new List&lt;int&gt;
+{
+    1, 4
+};
+
+// sending SMS
+var resultGroup = await bulkSmsClient.Promotional.SendSmsToGroups(groups, text: &quot;Hello &lt;first_name&gt;, we sent to your email &lt;email&gt; some content...&quot;)
+    .ConfigureAwait(false);
+</code></pre>
+<p>For sending SMS text for groups, there is the list of available variables:</p>
+<table>
+<thead>
+<tr>
+<th>VARIABLE</th>
+<th>MEANING</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>&lt;title_before&gt;</code></td>
+<td>Title before the name</td>
+</tr>
+<tr>
+<td><code>&lt;first_name&gt;</code></td>
+<td>First name</td>
+</tr>
+<tr>
+<td><code>&lt;last_name&gt;</code></td>
+<td>Last name</td>
+</tr>
+<tr>
+<td><code>&lt;title_after&gt;</code></td>
+<td>Title after the name</td>
+</tr>
+<tr>
+<td><code>&lt;first_name_vokativ&gt;</code></td>
+<td>First name vokativ for czech language</td>
+</tr>
+<tr>
+<td><code>&lt;last_name_vokativ&gt;</code></td>
+<td>Last name vokativ for czech language</td>
+</tr>
+<tr>
+<td><code>&lt;company_name&gt;</code></td>
+<td>Company name</td>
+</tr>
+<tr>
+<td><code>&lt;phone_mobile&gt;</code></td>
+<td>Mobile phone number</td>
+</tr>
+<tr>
+<td><code>&lt;phone&gt;</code></td>
+<td>Phone number</td>
+</tr>
+<tr>
+<td><code>&lt;email&gt;</code></td>
+<td>Email address</td>
+</tr>
+<tr>
+<td><code>&lt;fax&gt;</code></td>
+<td>Fax</td>
+</tr>
+<tr>
+<td><code>&lt;url&gt;</code></td>
+<td>Website address</td>
+</tr>
+<tr>
+<td><code>&lt;street1&gt;</code></td>
+<td>Street 1</td>
+</tr>
+<tr>
+<td><code>&lt;street2&gt;</code></td>
+<td>Street 2</td>
+</tr>
+<tr>
+<td><code>&lt;city&gt;</code></td>
+<td>City</td>
+</tr>
+<tr>
+<td><code>&lt;zip&gt;</code></td>
+<td>Zip code</td>
+</tr>
+<tr>
+<td><code>&lt;state&gt;</code></td>
+<td>Region</td>
+</tr>
+<tr>
+<td><code>&lt;country&gt;</code></td>
+<td>Country</td>
+</tr>
+<tr>
+<td><code>&lt;company_number&gt;</code></td>
+<td>Company registration number (CRN)</td>
+</tr>
+<tr>
+<td><code>&lt;company_vat&gt;</code></td>
+<td>VAT</td>
+</tr>
+<tr>
+<td><code>&lt;custom_field_0&gt;</code></td>
+<td>Custom field</td>
+</tr>
+<tr>
+<td><code>&lt;custom_field_1&gt;</code></td>
+<td>Custom field</td>
+</tr>
+<tr>
+<td><code>&lt;custom_field_2&gt;</code></td>
+<td>Custom field</td>
+</tr>
+<tr>
+<td><code>&lt;custom_field_3&gt;</code></td>
+<td>Custom field</td>
+</tr>
+<tr>
+<td><code>&lt;custom_field_4&gt;</code></td>
+<td>Custom field</td>
+</tr>
+<tr>
+<td><code>&lt;custom_field_5&gt;</code></td>
+<td>Custom field</td>
+</tr>
+<tr>
+<td><code>&lt;custom_field_6&gt;</code></td>
+<td>Custom field</td>
+</tr>
+<tr>
+<td><code>&lt;custom_field_7&gt;</code></td>
+<td>Custom field</td>
+</tr>
+<tr>
+<td><code>&lt;custom_field_8&gt;</code></td>
+<td>Custom field</td>
+</tr>
+<tr>
+<td><code>&lt;custom_field_9&gt;</code></td>
+<td>Custom field</td>
+</tr>
+</tbody>
+</table>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/mayaleh/Maya.BulkGate.Sms/blob/release-2.0.0/docs/articles/Promotional/sendtogroups.md/#L1" class="contribution-link">Improve this Doc</a>
+                  </li>
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+                <h5>In This Article</h5>
+                <div></div>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            
+            <span>Generated by <strong>DocFX</strong></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../../styles/docfx.js"></script>
+    <script type="text/javascript" src="../../styles/main.js"></script>
+  </body>
+</html>

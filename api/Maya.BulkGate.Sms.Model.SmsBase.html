@@ -1,0 +1,358 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Class SmsBase
+   </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Class SmsBase
+   ">
+    <meta name="generator" content="docfx 2.56.7.0">
+    
+    <link rel="shortcut icon" href="../favicon.ico">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <meta property="docfx:navrel" content="../toc.html">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+    
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../index.html">
+                <img id="logo" class="svg" src="../logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="Maya.BulkGate.Sms.Model.SmsBase">
+  
+  
+  <h1 id="Maya_BulkGate_Sms_Model_SmsBase" data-uid="Maya.BulkGate.Sms.Model.SmsBase" class="text-break">Class SmsBase
+  </h1>
+  <div class="markdown level0 summary"></div>
+  <div class="markdown level0 conceptual"></div>
+  <div class="inheritance">
+    <h5>Inheritance</h5>
+    <div class="level0"><span class="xref">System.Object</span></div>
+    <div class="level1"><span class="xref">SmsBase</span></div>
+      <div class="level2"><a class="xref" href="Maya.BulkGate.Sms.Model.Promotional.Sms-1.html">Sms&lt;TNumber&gt;</a></div>
+      <div class="level2"><a class="xref" href="Maya.BulkGate.Sms.Model.Transactional.Sms.html">Sms</a></div>
+  </div>
+  <h6><strong>Namespace</strong>: <a class="xref" href="Maya.BulkGate.Sms.Model.html">Maya.BulkGate.Sms.Model</a></h6>
+  <h6><strong>Assembly</strong>: Maya.BulkGate.Sms.dll</h6>
+  <h5 id="Maya_BulkGate_Sms_Model_SmsBase_syntax">Syntax</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public class SmsBase : object</code></pre>
+  </div>
+  <h3 id="properties">Properties
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/mayaleh/Maya.BulkGate.Sms/new/release-2.0.0/apiSpec/new?filename=Maya_BulkGate_Sms_Model_SmsBase_Country.md&amp;value=---%0Auid%3A%20Maya.BulkGate.Sms.Model.SmsBase.Country%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/mayaleh/Maya.BulkGate.Sms/blob/release-2.0.0/src/Maya.Bulkgate.Sms/Model/SmsBase.cs/#L66">View Source</a>
+  </span>
+  <a id="Maya_BulkGate_Sms_Model_SmsBase_Country_" data-uid="Maya.BulkGate.Sms.Model.SmsBase.Country*"></a>
+  <h4 id="Maya_BulkGate_Sms_Model_SmsBase_Country" data-uid="Maya.BulkGate.Sms.Model.SmsBase.Country">Country</h4>
+  <div class="markdown level1 summary"><p>Provide recipient numbers in international format (with prefix, for e.g 44), or add country code (7820125799 + GB = 447820125799).
+See the example of a country requirement.
+If the value is null, your set time zone will be used to fill in the information</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string Country { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/mayaleh/Maya.BulkGate.Sms/new/release-2.0.0/apiSpec/new?filename=Maya_BulkGate_Sms_Model_SmsBase_DuplicatesCheck.md&amp;value=---%0Auid%3A%20Maya.BulkGate.Sms.Model.SmsBase.DuplicatesCheck%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/mayaleh/Maya.BulkGate.Sms/blob/release-2.0.0/src/Maya.Bulkgate.Sms/Model/SmsBase.cs/#L96">View Source</a>
+  </span>
+  <a id="Maya_BulkGate_Sms_Model_SmsBase_DuplicatesCheck_" data-uid="Maya.BulkGate.Sms.Model.SmsBase.DuplicatesCheck*"></a>
+  <h4 id="Maya_BulkGate_Sms_Model_SmsBase_DuplicatesCheck" data-uid="Maya.BulkGate.Sms.Model.SmsBase.DuplicatesCheck">DuplicatesCheck</h4>
+  <div class="markdown level1 summary"><p>Select on to prevent sending duplicate messages to the same phone number.
+Messages with the same text sent to the same number will be removed if there is a time interval shorter than 5 mins. If off no duplicates will be removed.
+Supported values:</p>
+<ul><li>onprevent sending duplicate</li><li>offDefault value. No duplicates checking.</li></ul>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string DuplicatesCheck { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/mayaleh/Maya.BulkGate.Sms/new/release-2.0.0/apiSpec/new?filename=Maya_BulkGate_Sms_Model_SmsBase_Schedule.md&amp;value=---%0Auid%3A%20Maya.BulkGate.Sms.Model.SmsBase.Schedule%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/mayaleh/Maya.BulkGate.Sms/blob/release-2.0.0/src/Maya.Bulkgate.Sms/Model/SmsBase.cs/#L72">View Source</a>
+  </span>
+  <a id="Maya_BulkGate_Sms_Model_SmsBase_Schedule_" data-uid="Maya.BulkGate.Sms.Model.SmsBase.Schedule*"></a>
+  <h4 id="Maya_BulkGate_Sms_Model_SmsBase_Schedule" data-uid="Maya.BulkGate.Sms.Model.SmsBase.Schedule">Schedule</h4>
+  <div class="markdown level1 summary"><p>Schedule the sending time and date in unix timestamp, or ISO 8601.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public DateTime? Schedule { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">DateTime</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/mayaleh/Maya.BulkGate.Sms/new/release-2.0.0/apiSpec/new?filename=Maya_BulkGate_Sms_Model_SmsBase_SenderId.md&amp;value=---%0Auid%3A%20Maya.BulkGate.Sms.Model.SmsBase.SenderId%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/mayaleh/Maya.BulkGate.Sms/blob/release-2.0.0/src/Maya.Bulkgate.Sms/Model/SmsBase.cs/#L51">View Source</a>
+  </span>
+  <a id="Maya_BulkGate_Sms_Model_SmsBase_SenderId_" data-uid="Maya.BulkGate.Sms.Model.SmsBase.SenderId*"></a>
+  <h4 id="Maya_BulkGate_Sms_Model_SmsBase_SenderId" data-uid="Maya.BulkGate.Sms.Model.SmsBase.SenderId">SenderId</h4>
+  <div class="markdown level1 summary"><p>Sender id types:</p>
+<table><thead><tr><th>Value</th><th>Meaning</th></tr></thead><tbody><tr><td>gSystem</td><td>System number</td></tr><tr><td>gShort</td><td>Short Code</td></tr><tr><td>gText</td><td>Text sender</td></tr><tr><td>gMobile</td><td>Mobile Connect - Sends SMS message throught Mobile Connect app</td></tr><tr><td>gPush</td><td>Mobile Connect push - Sends a notification to the Mobile Connect app</td></tr><tr><td>gOwn</td><td>Own number (requires number verification)</td></tr><tr><td>int number</td><td>BulkGate Profil ID</td></tr></tbody></table>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public object SenderId { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Object</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/mayaleh/Maya.BulkGate.Sms/new/release-2.0.0/apiSpec/new?filename=Maya_BulkGate_Sms_Model_SmsBase_SenderIdValue.md&amp;value=---%0Auid%3A%20Maya.BulkGate.Sms.Model.SmsBase.SenderIdValue%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/mayaleh/Maya.BulkGate.Sms/blob/release-2.0.0/src/Maya.Bulkgate.Sms/Model/SmsBase.cs/#L57">View Source</a>
+  </span>
+  <a id="Maya_BulkGate_Sms_Model_SmsBase_SenderIdValue_" data-uid="Maya.BulkGate.Sms.Model.SmsBase.SenderIdValue*"></a>
+  <h4 id="Maya_BulkGate_Sms_Model_SmsBase_SenderIdValue" data-uid="Maya.BulkGate.Sms.Model.SmsBase.SenderIdValue">SenderIdValue</h4>
+  <div class="markdown level1 summary"><p>Sender value gOwn, gText, gMobile, or gPush (if gMobile, or gPush used, please supply mobile connect key as sender_id_value)</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string SenderIdValue { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/mayaleh/Maya.BulkGate.Sms/new/release-2.0.0/apiSpec/new?filename=Maya_BulkGate_Sms_Model_SmsBase_Tag.md&amp;value=---%0Auid%3A%20Maya.BulkGate.Sms.Model.SmsBase.Tag%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/mayaleh/Maya.BulkGate.Sms/blob/release-2.0.0/src/Maya.Bulkgate.Sms/Model/SmsBase.cs/#L78">View Source</a>
+  </span>
+  <a id="Maya_BulkGate_Sms_Model_SmsBase_Tag_" data-uid="Maya.BulkGate.Sms.Model.SmsBase.Tag*"></a>
+  <h4 id="Maya_BulkGate_Sms_Model_SmsBase_Tag" data-uid="Maya.BulkGate.Sms.Model.SmsBase.Tag">Tag</h4>
+  <div class="markdown level1 summary"><p>Message label for subsequent retrieval of the user.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string Tag { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/mayaleh/Maya.BulkGate.Sms/new/release-2.0.0/apiSpec/new?filename=Maya_BulkGate_Sms_Model_SmsBase_Unicode.md&amp;value=---%0Auid%3A%20Maya.BulkGate.Sms.Model.SmsBase.Unicode%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/mayaleh/Maya.BulkGate.Sms/blob/release-2.0.0/src/Maya.Bulkgate.Sms/Model/SmsBase.cs/#L11">View Source</a>
+  </span>
+  <a id="Maya_BulkGate_Sms_Model_SmsBase_Unicode_" data-uid="Maya.BulkGate.Sms.Model.SmsBase.Unicode*"></a>
+  <h4 id="Maya_BulkGate_Sms_Model_SmsBase_Unicode" data-uid="Maya.BulkGate.Sms.Model.SmsBase.Unicode">Unicode</h4>
+  <div class="markdown level1 summary"><p>true for Unicode SMS, false for 7bit SMS</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool? Unicode { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">System.Boolean</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/mayaleh/Maya.BulkGate.Sms/new/release-2.0.0/apiSpec/new?filename=Maya_BulkGate_Sms_Model_SmsBase.md&amp;value=---%0Auid%3A%20Maya.BulkGate.Sms.Model.SmsBase%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
+                  </li>
+                  <li>
+                    <a href="https://github.com/mayaleh/Maya.BulkGate.Sms/blob/release-2.0.0/src/Maya.Bulkgate.Sms/Model/SmsBase.cs/#L6" class="contribution-link">View Source</a>
+                  </li>
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+                <h5>In This Article</h5>
+                <div></div>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            
+            <span>Generated by <strong>DocFX</strong></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>
